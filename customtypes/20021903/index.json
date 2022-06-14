@@ -1,0 +1,9 @@
+{
+  "id": "20021903",
+  "label": "Publication",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

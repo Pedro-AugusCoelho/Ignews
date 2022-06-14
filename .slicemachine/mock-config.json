@@ -1,0 +1,19 @@
+{
+  "_cts": {
+    "20020319": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "content": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "20021903": {}
+  }
+}
