@@ -7,7 +7,6 @@ export const repositoryName = 'ignews1903';
 export function createClient(req?:unknown) {
   const client = prismic.createClient(endpoint, {
     accessToken:process.env.PRISMIC_ACCESS_TOKEN,
-    defaultParams: req,
   })
 
   enableAutoPreviews({

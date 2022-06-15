@@ -14,6 +14,20 @@
         }
       }
     },
-    "20021903": {}
+    "20021903": {},
+    "post": {
+      "content": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   }
 }

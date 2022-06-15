@@ -11,9 +11,10 @@ type PostProps = {
 }
 
 const Post = ({excerpt , slug , updatedAt , title}:PostProps) => {
+    
     return(
         <>
-            {title}
+            ...
         </>
     )
 }
@@ -29,9 +30,9 @@ export const getServerSideProps:GetServerSideProps = async({req , params}) => {
     
     const prismic = createClient(req);
 
-    const response = await prismic.getByUID('publication' , slug.toString());
+    const response = await prismic.getByUID('post' , String(slug));
 
-    /*const post = {
+    const post = {
         slug,
         title:asText(response.data.title),
         content:asHTML(response.data.content),
@@ -40,10 +41,10 @@ export const getServerSideProps:GetServerSideProps = async({req , params}) => {
             month:'long',
             year:'numeric'
         }),
-    }*/
+    }
 
     return{
-        props: {}
+        props: { post }
     }
     //if(!session){
     //}

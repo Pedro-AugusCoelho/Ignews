@@ -48,7 +48,7 @@ export const getStaticProps:GetStaticProps = async({previewData}) => {
     
     const client = createClient();
   
-    const response = await client.getAllByType('20020319');
+    const response = await client.getAllByType('post');
 
 
     const posts = response.map((post) => {
