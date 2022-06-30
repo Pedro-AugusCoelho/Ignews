@@ -48,7 +48,7 @@ export default function Home({product}:HomeProps) {
       
       </main>
 
-      {/*<MenuMobileFooter />*/}
+      <MenuMobileFooter />
     
     </>
   )

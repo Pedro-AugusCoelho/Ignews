@@ -12,7 +12,7 @@ export const SignInButton = () => {
 
     if(name?.length > 15){
         name = name.slice(0,10).concat('...');
-    }
+    };
 
     return session
     

@@ -1,0 +1,17 @@
+.ButtonBack{
+    display: none;
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    padding: .7rem;
+    background-color: var(--gray-800);
+    border-radius: 50%;
+    cursor: pointer;
+    .Icon{
+        text-align: center;
+        color:var(--gray-100);
+    }
+    @media(max-width:600px){
+        display: flex;
+    }
+}

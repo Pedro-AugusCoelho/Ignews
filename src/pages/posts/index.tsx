@@ -4,6 +4,7 @@ import { endpoint, createClient } from '../../services/prismic';
 import styles from './styles.module.scss';
 import * as prismicH from '@prismicio/helpers';
 import Link from 'next/link';
+import { GoBackPage } from '../../components/GoBackPage';
 
 
 type Post = {
@@ -25,6 +26,8 @@ const Posts = ({ posts }:PostsProps) => {
             </Head>
 
             <main className={styles.container}>
+
+                <GoBackPage redirect='/' />
                 
                 <div className={styles.posts}>
                     {posts.map((item)=> (

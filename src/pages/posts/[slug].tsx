@@ -4,6 +4,7 @@ import { getSession } from "next-auth/react";
 import Head from "next/head";
 import { createClient } from "../../services/prismic";
 import styles from './post.module.scss';
+import { GoBackPage } from "../../components/GoBackPage";
 
 type PostProps = {
     slug: string,
@@ -21,6 +22,9 @@ const Post = ({content , slug , updatedAt , title}:PostProps) => {
             </Head>
 
             <main className={styles.container}>
+
+                <GoBackPage redirect="/posts" />
+                
                 <article className={styles.post}>
                     <h1>{title}</h1>
                     <time>{updatedAt}</time>
@@ -47,7 +51,7 @@ export const getServerSideProps:GetServerSideProps = async({req , params}) => {
             redirect:{
                 destination: '/',
                 permanent:false,
-            }
+            },
         }
     }
     
