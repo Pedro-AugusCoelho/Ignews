@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import Head from '../../node_modules/next/head';
+import { MenuMobileFooter } from '../components/MenuMobileFooter';
 import { SubscribeButton } from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
 import styles from './home.module.scss';
@@ -21,21 +22,33 @@ export default function Home({product}:HomeProps) {
       <Head><title>Home | ig.news</title></Head>
       
       <main className={styles.ContentConatiner}>
+       
         <section className={styles.hero}>
-          <span>👏 Hey, welcome </span>
-          <h1>News about the <span>React</span> world.</h1>
+          
+          <span>Seja Bem Vindo!!</span>
+          
+          <h1>
+           Novidades do mundo da <span>Tecnologia</span> e <span>Games</span> 
+          </h1>
+          
           <p>
-            Get access to all the publications <br /> 
-            <span>for {product.amount} month </span>
+            Tenha acesso a todas as publicações<br /> 
+            <span>Por {product.amount}/Mês </span>
           </p>
 
+
           <SubscribeButton priceId={product.priceId} />
+        
         </section>
         
-        
-        <img src='/images/avatar.svg' alt='Avatar'/>
+        <div className={styles.ContainerImg}>
+          <span>Seja Bem Vindo!!</span>
+          <img src='/images/avatar.svg' alt='Avatar'/>
+        </div>
       
       </main>
+
+      {/*<MenuMobileFooter />*/}
     
     </>
   )

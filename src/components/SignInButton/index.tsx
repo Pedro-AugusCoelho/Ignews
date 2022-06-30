@@ -7,13 +7,19 @@ import styles from './styles.module.scss';
 export const SignInButton = () => {
     
     const { data: session } = useSession();
+    
+    let name = session?.user?.name;
+
+    if(name?.length > 15){
+        name = name.slice(0,10).concat('...');
+    }
 
     return session
     
     ? (
         <button type='button' className={styles.signInButton} onClick={() => signOut()}>
-            <FaGithub color="#04d361" />
-            {session.user.name}
+            <FaGithub color="#04d361" className={styles.Icon} />
+            {name}
             <FiX color='#737380' className={styles.closeIcon}/>
         </button>
     ) 
@@ -25,7 +31,8 @@ export const SignInButton = () => {
         onClick={() => signIn('github')}
         >
             <FaGithub color="#eba417" />
-            Sign in with Github
+            <span>Sign in with Github</span>
+        
         </button>
     )
 }

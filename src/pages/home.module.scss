@@ -3,10 +3,13 @@
     margin: 0 auto;
     padding: 0 2rem;
     height: calc(100vh - 5rem);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media(max-width:800px){
+        flex-direction: column-reverse;
+        height: auto;
+    }
 }
 
 .hero{
@@ -36,7 +39,49 @@
     button{
         margin-top: 2.5rem;
     }
+    @media(max-width:800px){
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        > span{
+            display: none;
+        }
+    }
+    @media(max-width:440px){
+        h1{
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+    }
+}
 
+.ContainerImg{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    span{
+        margin: 2rem 0;
+        display: none;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    @media(max-width:800px){
+        span{
+            display: inline-block;
+        }
+        img{
+            width: 250px;
+        }
+    }
+    @media(max-width:440px){
+        img{
+            width: 150px;
+        }
+    }
 
 }
 

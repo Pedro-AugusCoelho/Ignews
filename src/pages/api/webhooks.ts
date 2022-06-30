@@ -1,6 +1,5 @@
 import Stripe from "stripe";
 import { NextApiRequest, NextApiResponse } from "next";
-import { RESPONSE_LIMIT_DEFAULT } from "next/dist/server/api-utils";
 import { Readable } from 'stream';
 import { stripe } from "../../services/stripe";
 import { saveSubscription } from "./_lib/manageSubscription";
@@ -47,6 +46,7 @@ export default async(req:NextApiRequest , res:NextApiResponse) => {
         }
 
         const {type} = event;
+
 
         if(relevantEvents.has(type)){
             try {
