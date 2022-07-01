@@ -1,6 +1,6 @@
 # Sobre o projeto 💬
 
-O **IgNews** é uma aplicação web desenvolvida na Rocketseat
+O **IgNews** é uma aplicação web de blog, desenvolvida na Rocketseat
 
 ## Funcionalidades 🧠
 
