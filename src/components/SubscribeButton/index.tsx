@@ -19,7 +19,7 @@ export const SubscribeButton = ({priceId}:SubscribeButtonProps) => {
             signIn('github');
             return;
         }
-        if(session.ActiveSubscription){
+        if(session.expires){
             router.push('/posts');
             return;
         }

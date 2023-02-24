@@ -21,7 +21,7 @@ const PostPreview = ({content , slug , updatedAt , title}:PostPreviewProps) => {
     const router = useRouter();
     
     useEffect(() => {
-        if(session.activeSubscription){
+        if(session.expires){
             router.push(`/posts/${slug}`);
         }
 

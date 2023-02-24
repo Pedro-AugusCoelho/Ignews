@@ -46,7 +46,7 @@ export const getServerSideProps:GetServerSideProps = async({req , params}) => {
     
     const session = await getSession({req});
 
-    if(!session?.ActiveSubscription){
+    if(!session?.expires){
         return {
             redirect:{
                 destination: '/',
